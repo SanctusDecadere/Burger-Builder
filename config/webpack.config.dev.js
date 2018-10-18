@@ -37,7 +37,11 @@ const getStyleLoaders = (cssOptions, preProcessor) => {
     require.resolve('style-loader'),
     {
       loader: require.resolve('css-loader'),
-      options: cssOptions,
+      options: {
+        cssOptions,
+        modules: true,
+        localIdentName: '[name]__[local]__[hash:base64:5]'
+      },
     },
     {
       // Options for PostCSS as we reference these options twice
@@ -278,8 +282,8 @@ module.exports = {
             use: getStyleLoaders({
               importLoaders: 1,
               modules: true,
-              // localIdentName: [name]__[local]__[hash:base64:5],
-              getLocalIdent: getCSSModuleLocalIdent,
+              localIdentName: '[name]__[local]__[hash:base64:5]',
+              getLocalIdent: getCSSModuleLocalIdent
             }),
           },
           // Opt-in support for SASS (using .scss or .sass extensions).
