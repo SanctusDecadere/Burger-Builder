@@ -1,0 +1,44 @@
+/*Mobile Layout*/
+.Burger {
+	width: 60%;
+	margin: auto;
+	height: 250px;
+	overflow:scroll;
+	text-align:center;
+	font-weight:bold;
+	font-size:1.2rem;
+}
+
+/*Desktop?*/
+@media (min-width: 1000px) and (min-height: 700px) {
+	.Burger {
+		width: 700px;
+		height:600px;
+	}
+
+}
+
+/*These are the numbers the professor gave. Not sure about */
+/*Them at all.Especially these last two. 400 then 401? WTF?*/
+/*Maybe im missing something. They seem to close together*/
+
+/*Portrait*/
+@media (min-width: 500px) and (min-height: 400px) {
+	.Burger {
+		width: 250px;
+		height:300px;
+	}
+
+}
+
+
+/*********************************************************/
+
+/**/
+@media (min-width: 500px) and (min-height: 401px) {
+	.Burger {
+		width: 450px;
+		height:400px;
+	}
+
+}
